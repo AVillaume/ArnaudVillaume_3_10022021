@@ -24,8 +24,7 @@ $mint: #99E2D0;
 }
   
 body {
-    max-width: 400px;
-    margin: auto;
+    margin: 0px;
     font-family: 'Roboto-Regular';
   }
   
@@ -53,7 +52,11 @@ header .header_logo {
     max-width: auto;
     height: 50%;
 }
-  
+
+.headerAlign {
+    position: relative;
+}
+
 .location {
     color: rgb(65, 65, 65);
     height: 40px;
@@ -226,7 +229,7 @@ footer {
     padding-top: 20px;
 }
 
-.footer_logo {
+.logoDesign {
     font-family: 'Shrikhand';
     font-size: 1.2em;
     margin-left: 20px;

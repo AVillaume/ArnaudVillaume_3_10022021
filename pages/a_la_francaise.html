@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/style_page.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
 
     <title>À la française</title>
@@ -13,11 +13,13 @@
 
 <body>
 
-    <header>
+    <header class="headerPage">
         <a href="../accueil.html">
             <i class="fas fa-arrow-left"></i>
         </a>
-        <img class="header_logo" src="../images/logo/logo.png" alt="logo" />
+        <div class="headerAlign">
+            <h1 class="logoPage">ohmyfood</h1>
+        </div>
     </header>
 
     <div class="illustration">
@@ -179,13 +181,13 @@
     </main>
 
     <footer>
-        <h3 class="footer_logo">ohmyfood</h3>
-        <ul id="footer_list">
-            <li><i class="fas fa-utensils"> Proposer un restaurant</li>
-            <li><i class="fas fa-hands-helping"></i> Devenir partenaire</li>
-            <li>Mentions légales</li>
-            <li>Contacts</li>
-        </ul>
+        <h3 class="logoDesign">ohmyfood</h3>
+        <div class="footer_list">
+            <div><i class="fas fa-utensils marginLine"></i> Proposer un restaurant</div>
+            <div><i class="fas fa-hands-helping marginLine"></i> Devenir partenaire</div>
+            <div class="marginLine">Mentions légales</div>
+            <a class="marginLine" href="">Contacts</a>
+        </div>
     </footer>
     
 </body>
