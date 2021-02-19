@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/style_page.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
 
     <title>Le délice des sens</title>
@@ -13,11 +13,13 @@
 
 <body>
 
-    <header>
-        <a href="../accueil.html">
+    <header class="headerPage">
+        <a href="../index.html">
             <i class="fas fa-arrow-left"></i>
         </a>
-        <img class="header_logo" src="../images/logo/logo.png" alt="logo" />
+        <div class="headerAlign">
+            <h1 class="logoPage">ohmyfood</h1>
+        </div>
     </header>
 
     <div class="illustration">
@@ -30,7 +32,7 @@
 
             <div class="resto_title">
                 <div>
-                    <h1>Le délice des sens</h1>
+                    <h1 class="bigTitle">Le délice des sens</h1>
                 </div>
                 <div class="heart">
                     <i class="far fa-heart"></i>
@@ -41,7 +43,7 @@
 
                 <div class="menu_container">
 
-                    <h2 class="menu_title">ENTRÉES</h2>
+                    <h2 class="menu_title"><div class="underline">ENTR</div>ÉES</h2>
 
                         <div class="all_repas">
 
@@ -49,7 +51,7 @@
                                 <div class="alignement">
                                     <h3>Tartare de thon</h3>
                                     <div class="text_row">
-                                        <p>Assaisonné au yuzu</p>
+                                        <p class="support">Assaisonné au yuzu</p>
                                         <p class="price">25€</p>
                                     </div>
                                 </div>
@@ -60,7 +62,7 @@
                                 <div class="alignement">
                                     <h3>Bouchée de homard croustillant</h3>
                                     <div class="text_row">
-                                        <p>Et sa farandole de petits légumes</p>
+                                        <p class="support">Et sa farandole de petits légumes</p>
                                         <p class="price">35€</p>
                                     </div>
                                 </div>
@@ -71,7 +73,7 @@
                                 <div class="alignement">
                                     <h3>Velouté de cèpes</h3>
                                     <div class="text_row">
-                                        <p>Aux truffes</p>
+                                        <p class="support">Aux truffes</p>
                                         <p class="price">20€</p>
                                     </div>
                                 </div>
@@ -84,7 +86,7 @@
 
                 <div class="menu_container">
 
-                    <h2 class="menu_title">PLATS</h2>
+                    <h2 class="menu_title"><div class="underline">PLAT</div>S</h2>
 
                         <div class="all_repas">
 
@@ -92,7 +94,7 @@
                                 <div class="alignement">
                                     <h3>Poulet rôti aux herbes de Provence</h3>
                                     <div class="text_row">
-                                        <p>Et sa crème de truffe</p>
+                                        <p class="support">Et sa crème de truffe</p>
                                         <p class="price">40€</p>
                                     </div>
                                 </div>
@@ -103,7 +105,7 @@
                                 <div class="alignement">
                                     <h3>Langouste rôtie</h3>
                                     <div class="text_row">
-                                        <p>Et ses légumes de saison</p>
+                                        <p class="support">Et ses légumes de saison</p>
                                         <p class="price">35€</p>
                                     </div>
                                 </div>
@@ -114,7 +116,7 @@
                                 <div class="alignement">
                                     <h3>Côte de boeuf Angus</h3>
                                     <div class="text_row">
-                                        <p>Et sa purée de panais</p>
+                                        <p class="support">Et sa purée de panais</p>
                                         <p class="price">44€</p>
                                     </div>
                                 </div>
@@ -127,7 +129,7 @@
 
                 <div class="menu_container">
 
-                    <h2 class="menu_title">DESSERTS</h2>
+                    <h2 class="menu_title"><div class="underline">DESS</div>ERTS</h2>
 
                         <div class="all_repas">
 
@@ -135,7 +137,7 @@
                                 <div class="alignement">
                                     <h3>Farandole de desserts</h3>
                                     <div class="text_row">
-                                        <p>Du chef</p>
+                                        <p class="support">Du chef</p>
                                         <p class="price">18€</p>
                                     </div>
                                 </div>
@@ -146,7 +148,7 @@
                                 <div class="alignement">
                                     <h3>Crème brulée</h3>
                                     <div class="text_row">
-                                        <p>Revisitée</p>
+                                        <p class="support">Revisitée</p>
                                         <p class="price">22€</p>
                                     </div>
                                 </div>
@@ -157,7 +159,7 @@
                                 <div class="alignement">
                                     <h3>Tiramisu</h3>
                                     <div class="text_row">
-                                        <p>À la noisette</p>
+                                        <p class="support">À la noisette</p>
                                         <p class="price">23€</p>
                                     </div>
                                 </div>
@@ -181,8 +183,8 @@
     <footer>
         <h3 class="logoDesign">ohmyfood</h3>
         <div class="footer_list">
-            <div><i class="fas fa-utensils marginLine"></i> Proposer un restaurant</div>
-            <div><i class="fas fa-hands-helping marginLine"></i> Devenir partenaire</div>
+            <div class="marginLine"><i class="fas fa-utensils"></i> Proposer un restaurant</div>
+            <div class="marginLine"><i class="fas fa-hands-helping"></i> Devenir partenaire</div>
             <div class="marginLine">Mentions légales</div>
             <a class="marginLine" href="">Contacts</a>
         </div>
