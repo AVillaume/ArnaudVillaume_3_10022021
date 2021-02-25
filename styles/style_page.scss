@@ -125,7 +125,16 @@ footer {
 .footer_list a {
     text-decoration: none;
     color: white;
+<<<<<<< Updated upstream
     &:hover {
 
+=======
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        max-width: 1400px;
+        margin: auto;
+>>>>>>> Stashed changes
     }
 }

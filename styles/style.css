@@ -232,6 +232,32 @@ header .header_logo {
   right: 10px;
   top: -45px;
   font-size: 1.5em;
+<<<<<<< Updated upstream
+=======
+  -webkit-transition: opacity 500ms ease-out;
+  transition: opacity 500ms ease-out;
+  cursor: pointer;
+  font-size: 25px;
+  z-index: 90;
+}
+
+.heartFull {
+  opacity: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), color-stop(#e86edb), color-stop(#cf64dc), color-stop(#b35cdc), to(#9356dc));
+  background: linear-gradient(to bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
+  background-clip: inherit;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.heart:active .heartEmpty {
+  opacity: 0;
+}
+
+.heart:active .heartFull {
+  opacity: 1;
+>>>>>>> Stashed changes
 }
 
 .bloc_btn {
@@ -284,5 +310,84 @@ footer {
 .footer_list a {
   text-decoration: none;
   color: white;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    max-width: 1400px;
+    margin: auto;
+  }
+  .all_block {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .highTitle {
+    margin-bottom: 50px;
+    font-size: 1.8em;
+  }
+  .block_fonction {
+    position: relative;
+    width: 250px;
+    height: 400px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    margin: 0px;
+  }
+  .fonction_number {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0px;
+    top: -20px;
+    height: 50px;
+    width: 50px;
+    -webkit-box-shadow: 1px 1px 1px grey;
+            box-shadow: 1px 1px 1px grey;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 1.6em;
+  }
+  .iconeSize {
+    font-size: 2em;
+    margin-top: 20px;
+  }
+  .fonction_text {
+    font-size: 1.6em;
+  }
+  .all_resto {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 90%;
+    margin: auto;
+  }
+  .card {
+    width: 480px;
+    height: 450px;
+    margin-bottom: 10px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

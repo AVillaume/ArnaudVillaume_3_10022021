@@ -138,4 +138,11 @@ footer {
   text-decoration: none;
   color: white;
 }
+
+@media screen and (min-width: 1024px) {
+  body {
+    max-width: 1400px;
+    margin: auto;
+  }
+}
 /*# sourceMappingURL=style_page.css.map */
