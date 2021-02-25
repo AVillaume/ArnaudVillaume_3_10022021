@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/style_page.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" />
 
     <title>À la française</title>
@@ -13,11 +13,13 @@
 
 <body>
 
-    <header>
-        <a href="../accueil.html">
+    <header class="headerPage">
+        <a href="../index.html">
             <i class="fas fa-arrow-left"></i>
         </a>
-        <img class="header_logo" src="../images/logo/logo.png" alt="logo" />
+        <div class="headerAlign">
+            <h1 class="logoPage">ohmyfood</h1>
+        </div>
     </header>
 
     <div class="illustration">
@@ -30,7 +32,7 @@
 
             <div class="resto_title">
                 <div>
-                    <h1>La note enchantée</h1>
+                    <h1 class="bigTitle">La note enchantée</h1>
                 </div>
                 <div class="heart">
                     <i class="far fa-heart"></i>
@@ -41,7 +43,7 @@
 
                 <div class="menu_container">
 
-                    <h2 class="menu_title">ENTRÉES</h2>
+                    <h2 class="menu_title"><div class="underline">ENTR</div>ÉES</h2>
 
                         <div class="all_repas">
 
@@ -49,7 +51,7 @@
                                 <div class="alignement">
                                     <h3>Ravioles de foie gras</h3>
                                     <div class="text_row">
-                                        <p>Accompagnés de leur crème à la truffe</p>
+                                        <p class="support">Accompagnés de leur crème à la truffe</p>
                                         <p class="price">25€</p>
                                     </div>
                                 </div>
@@ -60,7 +62,7 @@
                                 <div class="alignement">
                                     <h3>Caviar osciètre</h3>
                                     <div class="text_row">
-                                        <p>Sur blini à la farine de blé noir</p>
+                                        <p class="support">Sur blini à la farine de blé noir</p>
                                         <p class="price">35€</p>
                                     </div>
                                 </div>
@@ -71,7 +73,7 @@
                                 <div class="alignement">
                                     <h3>Homard et espuma de potiron</h3>
                                     <div class="text_row">
-                                        <p>Mariné aux zestes d'orange</p>
+                                        <p class="support">Mariné aux zestes d'orange</p>
                                         <p class="price">20€</p>
                                     </div>
                                 </div>
@@ -82,7 +84,7 @@
                                 <div class="alignement">
                                     <h3>Foie gras de canard cuit entier</h3>
                                     <div class="text_row">
-                                        <p>Confiture de figue et pain toasté</p>
+                                        <p class="support">Confiture de figue et pain toasté</p>
                                         <p class="price">35€</p>
                                     </div>
                                 </div>
@@ -95,7 +97,7 @@
 
                 <div class="menu_container">
 
-                    <h2 class="menu_title">PLATS</h2>
+                    <h2 class="menu_title"><div class="underline">PLAT</div>S</h2>
 
                         <div class="all_repas">
 
@@ -103,7 +105,7 @@
                                 <div class="alignement">
                                     <h3>Noix de coquilles Saint-Jacques</h3>
                                     <div class="text_row">
-                                        <p>Sur lit de purée de céleri-rave</p>
+                                        <p class="support">Sur lit de purée de céleri-rave</p>
                                         <p class="price">40€</p>
                                     </div>
                                 </div>
@@ -114,7 +116,7 @@
                                 <div class="alignement">
                                     <h3>Langoustine poêlée</h3>
                                     <div class="text_row">
-                                        <p>Purée de patate douce</p>
+                                        <p class="support">Purée de patate douce</p>
                                         <p class="price">35€</p>
                                     </div>
                                 </div>
@@ -125,7 +127,7 @@
                                 <div class="alignement">
                                     <h3>Mijoté de queue de boeuf</h3>
                                     <div class="text_row">
-                                        <p>Et riz sauvage aux zestes de citron</p>
+                                        <p class="support">Et riz sauvage aux zestes de citron</p>
                                         <p class="price">44€</p>
                                     </div>
                                 </div>
@@ -138,7 +140,7 @@
 
                 <div class="menu_container">
 
-                    <h2 class="menu_title">DESSERTS</h2>
+                    <h2 class="menu_title"><div class="underline">DESS</div>ERTS</h2>
 
                         <div class="all_repas">
 
@@ -146,7 +148,7 @@
                                 <div class="alignement">
                                     <h3>Macaron noisette et chocolat</h3>
                                     <div class="text_row">
-                                        <p>Glace au caramel brun et sel de Guérande</p>
+                                        <p class="support">Glace au caramel brun et sel de Guérande</p>
                                         <p class="price">18€</p>
                                     </div>
                                 </div>
@@ -157,7 +159,7 @@
                                 <div class="alignement">
                                     <h3>Baba au rhum revisité</h3>
                                     <div class="text_row">
-                                        <p>Avec son coulis de citron</p>
+                                        <p class="support">Avec son coulis de citron</p>
                                         <p class="price">22€</p>
                                     </div>
                                 </div>
@@ -168,7 +170,7 @@
                                 <div class="alignement">
                                     <h3>Tarte au citron meringuée</h3>
                                     <div class="text_row">
-                                        <p>Déstructurée</p>
+                                        <p class="support">Déstructurée</p>
                                         <p class="price">23€</p>
                                     </div>
                                 </div>
@@ -182,10 +184,8 @@
             </div>
 
             <div class="bloc_btn">
-                <div class="btn">
-                    <button class="btn_reg">Commander</button>
-                </div>
-            </div>
+                <button class="btn">Commander</button>
+            </div>  
 
         </div>
 
@@ -194,8 +194,8 @@
     <footer>
         <h3 class="logoDesign">ohmyfood</h3>
         <div class="footer_list">
-            <div><i class="fas fa-utensils marginLine"></i> Proposer un restaurant</div>
-            <div><i class="fas fa-hands-helping marginLine"></i> Devenir partenaire</div>
+            <div class="marginLine"><i class="fas fa-utensils"></i> Proposer un restaurant</div>
+            <div class="marginLine"><i class="fas fa-hands-helping"></i> Devenir partenaire</div>
             <div class="marginLine">Mentions légales</div>
             <a class="marginLine" href="">Contacts</a>
         </div>
