@@ -272,5 +272,36 @@ footer {
     max-width: 1400px;
     margin: auto;
   }
+  .logoPage {
+    font-size: 2em;
+    top: -18px;
+  }
+  .fa-arrow-left {
+    font-size: 1.5em;
+    margin-left: 20px;
+    top: 13px;
+  }
+  .resto_title {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 1.6em;
+  }
+  .menu_title {
+    font-size: 1.6em;
+  }
+  .all_repas {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+  .plat {
+    width: 400px;
+    margin-top: 30px;
+  }
 }
 /*# sourceMappingURL=style_page.css.map */

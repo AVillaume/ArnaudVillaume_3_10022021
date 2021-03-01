@@ -295,27 +295,25 @@ header .header_logo {
 }
 
 .fa-heart {
-position: absolute;
-right: 20px;
-top: -50px;
-font-size: 1.5em;
-transition: opacity 500ms ease-out;
-cursor: pointer;
-font-size: 25px;
-z-index: 90;
+    position: absolute;
+    right: 20px;
+    top: -50px;
+    font-size: 1.5em;
+    transition: opacity 500ms ease-out;
+    cursor: pointer;
+    font-size: 25px;
+    z-index: 90;
 }
 
 .heartFull{
     opacity: 0;
-    background: linear-gradient(to bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
-    background-clip: inherit;
-	-webkit-background-clip: text;
+    background: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
 	-webkit-text-fill-color: transparent;
     font-weight: bold;
 }
 
 .heart{
-    &:active {
+    &:hover {
         .heartEmpty{
             opacity: 0;
         }
@@ -386,8 +384,10 @@ footer {
     }
 
     .highTitle {
-        margin-bottom: 50px;
+        margin-bottom: 60px;
         font-size: 1.8em;
+        display: flex;
+        justify-content: center;
     }
 
     .block_fonction {

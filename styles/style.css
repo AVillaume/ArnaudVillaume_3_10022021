@@ -407,19 +407,17 @@ header .header_logo {
 
 .heartFull {
   opacity: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), color-stop(#e86edb), color-stop(#cf64dc), color-stop(#b35cdc), to(#9356dc));
-  background: linear-gradient(to bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
-  background-clip: inherit;
-  -webkit-background-clip: text;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
   -webkit-text-fill-color: transparent;
   font-weight: bold;
 }
 
-.heart:active .heartEmpty {
+.heart:hover .heartEmpty {
   opacity: 0;
 }
 
-.heart:active .heartFull {
+.heart:hover .heartFull {
   opacity: 1;
 }
 
@@ -489,8 +487,14 @@ footer {
         justify-content: space-around;
   }
   .highTitle {
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     font-size: 1.8em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .block_fonction {
     position: relative;
