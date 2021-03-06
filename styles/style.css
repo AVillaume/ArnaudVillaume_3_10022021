@@ -395,30 +395,37 @@ header .header_logo {
 
 .fa-heart {
   position: absolute;
+  width: 30px;
+  height: 30px;
   right: 20px;
   top: -50px;
   font-size: 1.5em;
-  -webkit-transition: opacity 500ms ease-out;
-  transition: opacity 500ms ease-out;
+  -webkit-transition: opacity 700ms ease-out;
+  transition: opacity 700ms ease-out;
   cursor: pointer;
   font-size: 25px;
-  z-index: 90;
 }
 
-.heartFull {
+.heartFull::before {
   opacity: 0;
+  content: "\f004";
+  -webkit-transition: opacity 700ms ease-out;
+  transition: opacity 700ms ease-out;
+  font-weight: bold;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   background: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
+  background-clip: border-box;
+  font-variant: normal;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: bold;
 }
 
-.heart:hover .heartEmpty {
-  opacity: 0;
-}
-
-.heart:hover .heartFull {
+.heart:hover .heartFull::before, .heart:active .heartFull::before {
   opacity: 1;
+}
+
+.heart:hover .heartEmpty, .heart:active .heartEmpty {
+  opacity: 0;
 }
 
 .bloc_btn {

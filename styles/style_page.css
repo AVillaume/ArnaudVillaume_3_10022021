@@ -18,21 +18,6 @@
   src: url(../font/Shrikhand-Regular.ttf);
 }
 
-.appear_1 {
-  -webkit-animation-delay: 250ms;
-          animation-delay: 250ms;
-}
-
-.appear_2 {
-  -webkit-animation-delay: 500ms;
-          animation-delay: 500ms;
-}
-
-.appear_3 {
-  -webkit-animation-delay: 750ms;
-          animation-delay: 750ms;
-}
-
 .img_resto {
   width: 100%;
   height: 300px;
@@ -88,6 +73,7 @@ body {
   border-top-right-radius: 20px;
   margin-top: -60px;
   position: relative;
+  z-index: 200;
 }
 
 .btn {
@@ -175,6 +161,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-left: 15px;
+  margin-right: 15px;
 }
 
 .plat {
@@ -186,21 +173,53 @@ body {
   width: 96%;
   min-height: 70px;
   max-height: 70px;
+  position: relative;
+  overflow: hidden;
+  z-index: 100;
 }
 
-.plat:hover .fa-check-circle,
-.plat:active .fa-check-circle {
+.plat:hover .fa-check-circle, .plat:active .fa-check-circle, .plat:focus .fa-check-circle {
   -webkit-transform: rotate(1turn);
           transform: rotate(1turn);
-  -webkit-transition: -webkit-transform 500ms ease-in-out;
-  transition: -webkit-transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+  -webkit-transition: -webkit-transform 600ms ease-in-out;
+  transition: -webkit-transform 600ms ease-in-out;
+  transition: transform 600ms ease-in-out;
+  transition: transform 600ms ease-in-out, -webkit-transform 600ms ease-in-out;
 }
 
-.plat:hover .checkCircle,
-.plat:active .checkCircle {
+.plat:hover .checkCircle, .plat:active .checkCircle, .plat:focus .checkCircle {
   opacity: 1;
+  -webkit-transform: translateX(-80%);
+          transform: translateX(-80%);
+  -webkit-transition: -webkit-transform 450ms ease-in-out;
+  transition: -webkit-transform 450ms ease-in-out;
+  transition: transform 450ms ease-in-out;
+  transition: transform 450ms ease-in-out, -webkit-transform 450ms ease-in-out;
+}
+
+.plat:hover .price, .plat:active .price, .plat:focus .price {
+  -webkit-transform: translateX(-370%);
+          transform: translateX(-370%);
+  -webkit-transition: -webkit-transform 450ms ease-in-out;
+  transition: -webkit-transform 450ms ease-in-out;
+  transition: transform 450ms ease-in-out;
+  transition: transform 450ms ease-in-out, -webkit-transform 450ms ease-in-out;
+}
+
+.plat:hover .support, .plat:active .support, .plat:focus .support {
+  width: 60%;
+  -webkit-transition: -webkit-transform 1s ease-in;
+  transition: -webkit-transform 1s ease-in;
+  transition: transform 1s ease-in;
+  transition: transform 1s ease-in, -webkit-transform 1s ease-in;
+}
+
+.plat:hover .alignement h3, .plat:active .alignement h3, .plat:focus .alignement h3 {
+  width: 75%;
+  -webkit-transition: -webkit-transform 1s ease-in;
+  transition: -webkit-transform 1s ease-in;
+  transition: transform 1s ease-in;
+  transition: transform 1s ease-in, -webkit-transform 1s ease-in;
 }
 
 .plat h3, .plat .support {
@@ -210,13 +229,12 @@ body {
 }
 
 .checkCircle {
+  margin-right: 0px;
   opacity: 0;
   width: 20%;
-  height: 70px;
+  height: 100px;
   background-color: #99E2D0;
-  color: white;
   font-size: 1.6em;
-  border-radius: 0 15px 15px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -230,6 +248,15 @@ body {
   transition: -webkit-transform 330ms ease-in-out;
   transition: transform 330ms ease-in-out;
   transition: transform 330ms ease-in-out, -webkit-transform 330ms ease-in-out;
+  position: absolute;
+  top: -40px;
+  right: -20%;
+}
+
+.fa-check-circle::before {
+  content: "\f058";
+  font-weight: bold;
+  color: white;
 }
 
 .plat h3 {
@@ -260,6 +287,8 @@ body {
           justify-content: space-between;
   margin-top: -25px;
   margin-right: 10px;
+  position: relative;
+  z-index: 150;
 }
 
 .price {
@@ -351,6 +380,9 @@ footer {
   .plat {
     width: 400px;
     margin-top: 30px;
+  }
+  .plat:hover .support, .plat:active .support {
+    width: 90%;
   }
 }
 /*# sourceMappingURL=style_page.css.map */

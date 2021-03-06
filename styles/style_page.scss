@@ -23,17 +23,6 @@ $mint: #99E2D0;
     src: url(../font/Shrikhand-Regular.ttf);
 }
 
-.appear_1 {
-    animation-delay: 250ms;
-}
-
-.appear_2 {
-    animation-delay: 500ms;
-}
-
-.appear_3 {
-    animation-delay: 750ms;
-}
 
 .img_resto {
     width: 100%;
@@ -85,6 +74,7 @@ body {
     border-top-right-radius: 20px;
     margin-top: -60px;
     position: relative;
+    z-index: 200;
 }
 
 .btn {
@@ -147,6 +137,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-left: 15px;
+    margin-right: 15px;
 }
 
 .plat {
@@ -157,16 +148,35 @@ body {
     width: 96%;
     min-height: 70px;
     max-height: 70px;
-}
+    position: relative;
+    overflow: hidden;
+    z-index: 100;
+    &:hover,
+    &:active,
+    &:focus {
+        .fa-check-circle {
+            transform: rotate(1turn);
+            transition: transform 600ms ease-in-out;
+        }
+        .checkCircle {
+            opacity: 1;
+            transform: translateX(-80%);
+            transition: transform 450ms ease-in-out;
+        }
+        .price {
+            transform: translateX(-370%);
+            transition: transform 450ms ease-in-out;
+        }
 
-.plat:hover,
-.plat:active {
-    .fa-check-circle {
-		transform: rotate(1turn);
-        transition: transform 500ms ease-in-out;
-	}
-    .checkCircle {
-        opacity: 1;
+        .support{
+            width: 60%;
+            transition: transform 1s ease-in;
+        }
+
+        .alignement h3 {
+            width: 75%;
+            transition: transform 1s ease-in;
+        }
     }
 }
 
@@ -177,17 +187,25 @@ body {
 }
 
 .checkCircle {
+    margin-right: 0px;
     opacity: 0;
     width: 20%;
-	height: 70px;
+	height: 100px;
 	background-color: $mint;
-    color: white;
     font-size: 1.6em;
-	border-radius: 0 15px 15px 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	transition: transform 330ms ease-in-out;
+    position: absolute;
+    top: -40px;
+    right: -20%;
+}
+
+.fa-check-circle::before {
+    content: "\f058";
+    font-weight: bold;
+    color: white;
 }
 
 .plat h3 {
@@ -212,6 +230,8 @@ body {
     justify-content: space-between;
     margin-top: -25px;
     margin-right: 10px;
+    position: relative;
+    z-index: 150;
 }
 
 .price {
@@ -297,5 +317,10 @@ footer {
     .plat {
         width: 400px;
         margin-top: 30px;
+        &:hover, &:active {
+            .support {
+                width: 90%;
+            }
+        }
     }
 }

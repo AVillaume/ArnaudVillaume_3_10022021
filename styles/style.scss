@@ -296,29 +296,36 @@ header .header_logo {
 
 .fa-heart {
     position: absolute;
+    width: 30px;
+    height: 30px;
     right: 20px;
     top: -50px;
     font-size: 1.5em;
-    transition: opacity 500ms ease-out;
+    transition: opacity 700ms ease-out;
     cursor: pointer;
     font-size: 25px;
-    z-index: 90;
 }
 
-.heartFull{
+.heartFull::before{
     opacity: 0;
-    background: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
-	-webkit-text-fill-color: transparent;
+    content:  "\f004";
+    transition: opacity 700ms ease-out;
     font-weight: bold;
+    background: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
+    background-clip: border-box;
+	font-variant: normal;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .heart{
-    &:hover {
-        .heartEmpty{
-            opacity: 0;
-        }
-        .heartFull{
+    &:hover,
+    &:active {
+        .heartFull::before{
             opacity: 1;
+        }
+        .heartEmpty {
+            opacity: 0;
         }
     }
 }
