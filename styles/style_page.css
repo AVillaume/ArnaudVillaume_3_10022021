@@ -18,6 +18,53 @@
   src: url(../font/Shrikhand-Regular.ttf);
 }
 
+@-webkit-keyframes appear {
+  0% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.appear_1 {
+  -webkit-animation: 1s 0.5s appear;
+          animation: 1s 0.5s appear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.appear_2 {
+  -webkit-animation: 1s 750ms appear;
+          animation: 1s 750ms appear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.appear_3 {
+  -webkit-animation: 1s 1s appear;
+          animation: 1s 1s appear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
 .img_resto {
   width: 100%;
   height: 300px;
@@ -164,6 +211,10 @@ body {
   margin-right: 15px;
 }
 
+.menu_container {
+  opacity: 0;
+}
+
 .plat {
   background-color: #fff;
   -webkit-box-shadow: 0px 10px 20px -10px #c2c2c2;
@@ -175,10 +226,9 @@ body {
   max-height: 70px;
   position: relative;
   overflow: hidden;
-  z-index: 100;
 }
 
-.plat:hover .fa-check-circle, .plat:active .fa-check-circle, .plat:focus .fa-check-circle {
+.plat:hover .fa-check-circle {
   -webkit-transform: rotate(1turn);
           transform: rotate(1turn);
   -webkit-transition: -webkit-transform 600ms ease-in-out;
@@ -187,7 +237,7 @@ body {
   transition: transform 600ms ease-in-out, -webkit-transform 600ms ease-in-out;
 }
 
-.plat:hover .checkCircle, .plat:active .checkCircle, .plat:focus .checkCircle {
+.plat:hover .checkCircle {
   opacity: 1;
   -webkit-transform: translateX(-80%);
           transform: translateX(-80%);
@@ -197,16 +247,16 @@ body {
   transition: transform 450ms ease-in-out, -webkit-transform 450ms ease-in-out;
 }
 
-.plat:hover .price, .plat:active .price, .plat:focus .price {
+.plat:hover .price {
   -webkit-transform: translateX(-370%);
           transform: translateX(-370%);
-  -webkit-transition: -webkit-transform 450ms ease-in-out;
-  transition: -webkit-transform 450ms ease-in-out;
-  transition: transform 450ms ease-in-out;
-  transition: transform 450ms ease-in-out, -webkit-transform 450ms ease-in-out;
+  -webkit-transition: -webkit-transform 550ms ease-in-out;
+  transition: -webkit-transform 550ms ease-in-out;
+  transition: transform 550ms ease-in-out;
+  transition: transform 550ms ease-in-out, -webkit-transform 550ms ease-in-out;
 }
 
-.plat:hover .support, .plat:active .support, .plat:focus .support {
+.plat:hover .support {
   width: 60%;
   -webkit-transition: -webkit-transform 1s ease-in;
   transition: -webkit-transform 1s ease-in;
@@ -214,7 +264,7 @@ body {
   transition: transform 1s ease-in, -webkit-transform 1s ease-in;
 }
 
-.plat:hover .alignement h3, .plat:active .alignement h3, .plat:focus .alignement h3 {
+.plat:hover .alignement h3 {
   width: 75%;
   -webkit-transition: -webkit-transform 1s ease-in;
   transition: -webkit-transform 1s ease-in;
