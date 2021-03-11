@@ -290,6 +290,8 @@ header .header_logo {
           box-shadow: 0px 10px 23px -15px black;
   font-family: 'Roboto-Bold';
   font-weight: normal;
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
 }
 
 .btn:hover {
@@ -297,6 +299,13 @@ header .header_logo {
           filter: brightness(1.1);
   -webkit-box-shadow: 10px 10px 23px -1px rgba(0, 0, 0, 0.2);
           box-shadow: 10px 10px 23px -1px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  -webkit-animation: 500ms appear;
+          animation: 500ms appear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .highTitle {
@@ -395,15 +404,12 @@ header .header_logo {
 
 .fa-heart {
   position: absolute;
-  width: 30px;
-  height: 30px;
   right: 20px;
   top: -50px;
-  font-size: 1.5em;
   -webkit-transition: opacity 700ms ease-out;
   transition: opacity 700ms ease-out;
-  cursor: pointer;
   font-size: 25px;
+  padding: 5px;
 }
 
 .heartFull::before {
@@ -414,8 +420,7 @@ header .header_logo {
   font-weight: bold;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   background: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
-  background-clip: border-box;
-  font-variant: normal;
+  background-clip: content-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

@@ -18,6 +18,42 @@
   src: url(../font/Shrikhand-Regular.ttf);
 }
 
+@-webkit-keyframes textCut {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+@keyframes textCut {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 60%;
+  }
+}
+
+@-webkit-keyframes titleCut {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 75%;
+  }
+}
+
+@keyframes titleCut {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 75%;
+  }
+}
+
 @-webkit-keyframes appear {
   0% {
     -webkit-transform: translateY(-5px);
@@ -108,10 +144,17 @@ body {
   position: absolute;
   left: 20px;
   top: 18px;
+  -webkit-transition: 750ms ease-in-out;
+  transition: 750ms ease-in-out;
 }
 
 .fa-arrow-left:hover {
   color: #FF79DA;
+}
+
+.fa-arrow-left:active {
+  -webkit-transform: rotate(8turn) scale(15);
+          transform: rotate(8turn) scale(15);
 }
 
 .main_bloc {
@@ -121,6 +164,45 @@ body {
   margin-top: -60px;
   position: relative;
   z-index: 200;
+}
+
+.cardHeart {
+  position: relative;
+}
+
+.fa-heart {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 0px;
+  top: 0px;
+  font-size: 1.5em;
+  -webkit-transition: opacity 700ms ease-out;
+  transition: opacity 700ms ease-out;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.heartFull::before {
+  opacity: 0;
+  content: "\f004";
+  -webkit-transition: opacity 700ms ease-out;
+  transition: opacity 700ms ease-out;
+  font-weight: bold;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
+  background-clip: border-box;
+  font-variant: normal;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heart:hover .heartFull::before, .heart:active .heartFull::before {
+  opacity: 1;
+}
+
+.heart:hover .heartEmpty, .heart:active .heartEmpty {
+  opacity: 0;
 }
 
 .btn {
@@ -135,6 +217,8 @@ body {
           box-shadow: 0px 10px 23px -15px black;
   font-family: 'Roboto-Bold';
   font-weight: normal;
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
 }
 
 .btn:hover {
@@ -142,6 +226,13 @@ body {
           filter: brightness(1.1);
   -webkit-box-shadow: 10px 10px 23px -1px rgba(0, 0, 0, 0.2);
           box-shadow: 10px 10px 23px -1px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  -webkit-animation: 500ms appear;
+          animation: 500ms appear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .bloc_btn {
@@ -163,6 +254,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -228,7 +323,7 @@ body {
   overflow: hidden;
 }
 
-.plat:hover .fa-check-circle {
+.plat:hover .fa-check-circle, .plat:active .fa-check-circle, .plat:focus .fa-check-circle {
   -webkit-transform: rotate(1turn);
           transform: rotate(1turn);
   -webkit-transition: -webkit-transform 600ms ease-in-out;
@@ -237,39 +332,28 @@ body {
   transition: transform 600ms ease-in-out, -webkit-transform 600ms ease-in-out;
 }
 
-.plat:hover .checkCircle {
-  opacity: 1;
-  -webkit-transform: translateX(-80%);
-          transform: translateX(-80%);
-  -webkit-transition: -webkit-transform 450ms ease-in-out;
-  transition: -webkit-transform 450ms ease-in-out;
-  transition: transform 450ms ease-in-out;
-  transition: transform 450ms ease-in-out, -webkit-transform 450ms ease-in-out;
+.plat:hover .checkCircle, .plat:active .checkCircle, .plat:focus .checkCircle {
+  -webkit-transform: translateX(-110%);
+          transform: translateX(-110%);
 }
 
-.plat:hover .price {
-  -webkit-transform: translateX(-370%);
-          transform: translateX(-370%);
-  -webkit-transition: -webkit-transform 550ms ease-in-out;
-  transition: -webkit-transform 550ms ease-in-out;
-  transition: transform 550ms ease-in-out;
-  transition: transform 550ms ease-in-out, -webkit-transform 550ms ease-in-out;
+.plat:hover .price, .plat:active .price, .plat:focus .price {
+  -webkit-transform: translateX(-220%);
+          transform: translateX(-220%);
 }
 
-.plat:hover .support {
-  width: 60%;
-  -webkit-transition: -webkit-transform 1s ease-in;
-  transition: -webkit-transform 1s ease-in;
-  transition: transform 1s ease-in;
-  transition: transform 1s ease-in, -webkit-transform 1s ease-in;
+.plat:hover .support, .plat:active .support, .plat:focus .support {
+  -webkit-animation: 700ms ease-in-out textCut;
+          animation: 700ms ease-in-out textCut;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
-.plat:hover .alignement h3 {
-  width: 75%;
-  -webkit-transition: -webkit-transform 1s ease-in;
-  transition: -webkit-transform 1s ease-in;
-  transition: transform 1s ease-in;
-  transition: transform 1s ease-in, -webkit-transform 1s ease-in;
+.plat:hover .alignement h3, .plat:active .alignement h3, .plat:focus .alignement h3 {
+  -webkit-animation: 700ms ease-in-out titleCut;
+          animation: 700ms ease-in-out titleCut;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .plat h3, .plat .support {
@@ -280,8 +364,7 @@ body {
 
 .checkCircle {
   margin-right: 0px;
-  opacity: 0;
-  width: 20%;
+  width: 25%;
   height: 100px;
   background-color: #99E2D0;
   font-size: 1.6em;
@@ -294,19 +377,21 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: -webkit-transform 330ms ease-in-out;
-  transition: -webkit-transform 330ms ease-in-out;
-  transition: transform 330ms ease-in-out;
-  transition: transform 330ms ease-in-out, -webkit-transform 330ms ease-in-out;
+  -webkit-transition: -webkit-transform 750ms ease-in-out;
+  transition: -webkit-transform 750ms ease-in-out;
+  transition: transform 750ms ease-in-out;
+  transition: transform 750ms ease-in-out, -webkit-transform 750ms ease-in-out;
   position: absolute;
-  top: -40px;
-  right: -20%;
+  top: -15px;
+  right: -30%;
 }
 
 .fa-check-circle::before {
   content: "\f058";
   font-weight: bold;
   color: white;
+  position: relative;
+  right: 1.5px;
 }
 
 .plat h3 {
@@ -319,6 +404,10 @@ body {
 .support {
   font-family: 'Roboto-Light';
   font-size: 0.9em;
+  z-index: 1;
+  width: 100%;
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
 }
 
 .alignement {
@@ -337,14 +426,17 @@ body {
           justify-content: space-between;
   margin-top: -25px;
   margin-right: 10px;
-  position: relative;
-  z-index: 150;
 }
 
 .price {
   font-family: 'Roboto-Bold';
   font-weight: normal;
   font-size: 0.8em;
+  padding: 5px;
+  -webkit-transition: -webkit-transform 750ms ease-in-out;
+  transition: -webkit-transform 750ms ease-in-out;
+  transition: transform 750ms ease-in-out;
+  transition: transform 750ms ease-in-out, -webkit-transform 750ms ease-in-out;
 }
 
 footer {
@@ -433,6 +525,10 @@ footer {
   }
   .plat:hover .support, .plat:active .support {
     width: 90%;
+  }
+  .plat:hover .price, .plat:active .price {
+    -webkit-transform: translateX(-260%);
+            transform: translateX(-260%);
   }
 }
 /*# sourceMappingURL=style_page.css.map */
