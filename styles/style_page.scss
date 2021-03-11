@@ -246,6 +246,7 @@ body {
     max-height: 70px;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
     &:hover, 
     &:active,
     &:focus {
@@ -256,9 +257,9 @@ body {
         .checkCircle {
             transform: translateX(-110%);
         }
-        .price {
-            transform: translateX(-220%);
-        }
+        /*.price {
+            transform: translateX(-110%);
+        }*/
 
         .support{
             animation: 700ms ease-in-out textCut;
@@ -323,8 +324,6 @@ body {
 
 .text_row {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     margin-top: -25px;
     margin-right: 10px;
 }

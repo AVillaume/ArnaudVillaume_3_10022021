@@ -321,6 +321,13 @@ body {
   max-height: 70px;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
+}
+
+.plat:hover, .plat:active, .plat:focus {
+  /*.price {
+            transform: translateX(-110%);
+        }*/
 }
 
 .plat:hover .fa-check-circle, .plat:active .fa-check-circle, .plat:focus .fa-check-circle {
@@ -335,11 +342,6 @@ body {
 .plat:hover .checkCircle, .plat:active .checkCircle, .plat:focus .checkCircle {
   -webkit-transform: translateX(-110%);
           transform: translateX(-110%);
-}
-
-.plat:hover .price, .plat:active .price, .plat:focus .price {
-  -webkit-transform: translateX(-220%);
-          transform: translateX(-220%);
 }
 
 .plat:hover .support, .plat:active .support, .plat:focus .support {
@@ -418,12 +420,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin-top: -25px;
   margin-right: 10px;
 }
