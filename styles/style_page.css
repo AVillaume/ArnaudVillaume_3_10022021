@@ -291,8 +291,8 @@ body {
 }
 
 .underline {
-  -webkit-text-decoration: underline 3px #99E2D0;
-          text-decoration: underline 3px #99E2D0;
+  -webkit-text-decoration: 3px underline #99E2D0;
+          text-decoration: 3px underline #99E2D0;
   text-underline-position: under;
 }
 
