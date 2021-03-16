@@ -142,7 +142,7 @@ body {
 .fa-arrow-left {
   color: #414141;
   position: absolute;
-  left: 250px;
+  left: 20px;
   top: 18px;
   -webkit-transition: 750ms ease-in-out;
   transition: 750ms ease-in-out;
