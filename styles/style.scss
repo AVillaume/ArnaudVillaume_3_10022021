@@ -338,7 +338,6 @@ header .header_logo {
 }
 
 footer {
-    color: white;
     background-color: rgb(65, 65, 65);
     padding-top: 20px;
 }
@@ -349,6 +348,7 @@ footer {
     margin-left: 20px;
     margin-top: 0px;
     margin-bottom: 15px;
+    color: #FFF;
 }
 
 .footer_list {
@@ -378,7 +378,13 @@ footer {
 .footer_list a {
     text-decoration: none;
     color: white;
+    transition: 550ms ease-in-out;
+    &:hover,
+    &:active {
+        color: $pink;
+    }
 }
+
 
 @media screen and (min-width: 1024px) {
     body {

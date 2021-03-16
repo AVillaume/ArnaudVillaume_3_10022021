@@ -23,7 +23,7 @@
     width: 100%;
   }
   to {
-    width: 60%;
+    width: 68%;
   }
 }
 
@@ -32,7 +32,7 @@
     width: 100%;
   }
   to {
-    width: 60%;
+    width: 68%;
   }
 }
 
@@ -142,7 +142,7 @@ body {
 .fa-arrow-left {
   color: #414141;
   position: absolute;
-  left: 20px;
+  left: 250px;
   top: 18px;
   -webkit-transition: 750ms ease-in-out;
   transition: 750ms ease-in-out;
@@ -324,12 +324,6 @@ body {
   cursor: pointer;
 }
 
-.plat:hover, .plat:active, .plat:focus {
-  /*.price {
-            transform: translateX(-110%);
-        }*/
-}
-
 .plat:hover .fa-check-circle, .plat:active .fa-check-circle, .plat:focus .fa-check-circle {
   -webkit-transform: rotate(1turn);
           transform: rotate(1turn);
@@ -345,8 +339,8 @@ body {
 }
 
 .plat:hover .support, .plat:active .support, .plat:focus .support {
-  -webkit-animation: 700ms ease-in-out textCut;
-          animation: 700ms ease-in-out textCut;
+  -webkit-animation: 750ms ease-in-out textCut;
+          animation: 750ms ease-in-out textCut;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -406,10 +400,7 @@ body {
 .support {
   font-family: 'Roboto-Light';
   font-size: 0.9em;
-  z-index: 1;
   width: 100%;
-  -webkit-transition: 500ms ease-in-out;
-  transition: 500ms ease-in-out;
 }
 
 .alignement {
@@ -429,10 +420,6 @@ body {
   font-weight: normal;
   font-size: 0.8em;
   padding: 5px;
-  -webkit-transition: -webkit-transform 750ms ease-in-out;
-  transition: -webkit-transform 750ms ease-in-out;
-  transition: transform 750ms ease-in-out;
-  transition: transform 750ms ease-in-out, -webkit-transform 750ms ease-in-out;
 }
 
 footer {
@@ -451,9 +438,9 @@ footer {
 
 .footer_list {
   margin-left: 20px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding-bottom: 20px;
 }
 
@@ -481,6 +468,12 @@ footer {
 .footer_list a {
   text-decoration: none;
   color: white;
+  -webkit-transition: 550ms ease-in-out;
+  transition: 550ms ease-in-out;
+}
+
+.footer_list a:hover, .footer_list a:active {
+  color: #FF79DA;
 }
 
 @media screen and (min-width: 1024px) {
@@ -518,13 +511,6 @@ footer {
   .plat {
     width: 400px;
     margin-top: 30px;
-  }
-  .plat:hover .support, .plat:active .support {
-    width: 90%;
-  }
-  .plat:hover .price, .plat:active .price {
-    -webkit-transform: translateX(-260%);
-            transform: translateX(-260%);
   }
 }
 /*# sourceMappingURL=style_page.css.map */

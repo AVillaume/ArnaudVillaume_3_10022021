@@ -438,7 +438,6 @@ header .header_logo {
 }
 
 footer {
-  color: white;
   background-color: #414141;
   padding-top: 20px;
 }
@@ -449,6 +448,7 @@ footer {
   margin-left: 20px;
   margin-top: 0px;
   margin-bottom: 15px;
+  color: #FFF;
 }
 
 .footer_list {
@@ -483,6 +483,12 @@ footer {
 .footer_list a {
   text-decoration: none;
   color: white;
+  -webkit-transition: 550ms ease-in-out;
+  transition: 550ms ease-in-out;
+}
+
+.footer_list a:hover, .footer_list a:active {
+  color: #FF79DA;
 }
 
 @media screen and (min-width: 1024px) {
