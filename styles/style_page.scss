@@ -218,6 +218,8 @@ body {
     margin-left: 15px;
     font-family: 'Roboto-Light';
     display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .underline {
@@ -402,6 +404,7 @@ footer {
 
     .menu_title {
         font-size: 1.6em;
+        justify-content: center;
     }
 
     .all_repas {

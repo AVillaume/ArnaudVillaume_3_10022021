@@ -286,6 +286,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .underline {
@@ -499,6 +501,9 @@ footer {
   }
   .menu_title {
     font-size: 1.6em;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .all_repas {
     -ms-flex-pack: distribute;
