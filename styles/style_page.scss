@@ -22,6 +22,9 @@ $mint: #99E2D0;
     font-family: 'Shrikhand';
     src: url(../font/Shrikhand-Regular.ttf);
 }
+
+/********** ANIMATION **********/
+
 @keyframes textCut {
     from {
         width: 100%;
@@ -51,6 +54,8 @@ $mint: #99E2D0;
     }
 }
 
+/*********** APPEAR *********/
+
 .appear_1 {
     animation: 1s 0.5s appear;
     animation-fill-mode: forwards;
@@ -66,18 +71,28 @@ $mint: #99E2D0;
     animation-fill-mode: forwards;
 }
 
+.menu_container {
+    opacity: 0;
+}
+
+/************* RESTAURANT IMAGE **********/
+
 .img_resto {
     width: 100%;
     height: 300px;
     object-fit: cover;
     object-position: 30% 50%;
 }
+
+/********* BODY *********/
   
 body {
     max-width: 760px;
     margin: auto;
     font-family: 'Roboto-Regular';
 }
+
+/******** HEADER *******/
 
 .logoPage {
     font-family: 'Shrikhand';
@@ -92,13 +107,13 @@ body {
     justify-content: center;
 }
 
-
-
 .headerPage {
     height: 50px;
     width: 100%;
     background-color: white;
 }
+
+/********** ARROW BACK HOME *********/
 
 .fa-arrow-left {
     color: rgb(65, 65, 65);
@@ -114,6 +129,8 @@ body {
     }
 }
 
+/************ BLOC PAGE ***********/
+
 .main_bloc {
     background-color: #EEEEEE;
     border-top-left-radius: 20px;
@@ -122,6 +139,26 @@ body {
     position: relative;
     z-index: 200;
 }
+
+/********** RESTAURANT TITLE **********/
+
+.resto_title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-right: 20px;
+    padding-top: 5px;
+}
+
+.bigTitle {
+    font-family: 'Shrikhand';
+    font-size: 1.5em;
+}
+
+
+/********* HEART GRADIENT *********/
 
 .cardHeart {
     position: relative;
@@ -163,54 +200,11 @@ body {
     }
 }
 
-.btn {
-    background-image: linear-gradient(to bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
-    border-radius: 30px;
-    font-size: 0.8em;
-    color: white;
-    border: none;
-    padding: 15px;
-    box-shadow: 0px 10px 23px -15px black ;
-    font-family: 'Roboto-Bold';
-    font-weight: normal;
-    transition: 500ms ease-in-out;
-    &:hover {
-		filter: brightness(1.1);
-		box-shadow: 10px 10px 23px -1px rgba(0,0,0,0.20);
-	}
-    &:active {
-        animation: 500ms appear;
-        animation-fill-mode: forwards;
-    }
-}
-
-.bloc_btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
-    margin-top: -15px;
-    padding-bottom: 20px;
-}
-
-.resto_title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 15px;
-    margin-right: 20px;
-    padding-top: 5px;
-}
-
-.bigTitle {
-    font-family: 'Shrikhand';
-    font-size: 1.5em;
-}
-
 .heart {
     font-size: 1.2em;
 }
+
+/******* MENU TITLE ********/
 
 .menu_title {
     color: rgb(65, 65, 65);
@@ -227,6 +221,8 @@ body {
     text-underline-position: under;
 }
 
+/*********** ALL REPAS ( FLEX & MARGIN ) **********/
+
 .all_repas {
     display: flex;
     flex-direction: column;
@@ -234,9 +230,15 @@ body {
     margin-right: 15px;
 }
 
-.menu_container {
-    opacity: 0;
+/***************** BREAK WORD AND OVERFLOW HIDDEN *****************/
+
+.plat h3, .plat .support {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
+
+/********* PLAT CARD ********/
 
 .plat {
     background-color: #fff;
@@ -249,17 +251,16 @@ body {
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    &:hover, 
-    &:active,
-    &:focus {
-        .fa-check-circle {
+    &:hover,                                                        
+    &:active,                                                       
+    &:focus {                                                       
+        .fa-check-circle {/*         <-----   ANIMATION CHECK CIRCLE */   
             transform: rotate(1turn);
             transition: transform 600ms ease-in-out;
         }
         .checkCircle {
             transform: translateX(-110%);
         }
-
         .support{
             animation: 750ms ease-in-out textCut;
             animation-fill-mode: forwards;
@@ -270,36 +271,6 @@ body {
             animation-fill-mode: forwards;
         }
     }
-}
-
-
-.plat h3, .plat .support {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
-.checkCircle {
-    margin-right: 0px;
-    width: 25%;
-	height: 100px;
-	background-color: $mint;
-    font-size: 1.6em;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	transition: transform 750ms ease-in-out;
-    position: absolute;
-    top: -15px;
-    right: -30%;
-}
-
-.fa-check-circle::before {
-    content: "\f058";
-    font-weight: bold;
-    color: white;
-    position: relative;
-    right: 1.5px;
 }
 
 .plat h3 {
@@ -331,6 +302,65 @@ body {
     font-size: 0.8em;
     padding: 5px;
 }
+
+/***************** CHECK CIRCLE ***************/
+
+.checkCircle {
+    margin-right: 0px;
+    width: 25%;
+	height: 100px;
+	background-color: $mint;
+    font-size: 1.6em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: transform 750ms ease-in-out;
+    position: absolute;
+    top: -15px;
+    right: -30%;
+}
+
+.fa-check-circle::before {
+    content: "\f058";
+    font-weight: bold;
+    color: white;
+    position: relative;
+    right: 1.5px;
+}
+
+/************** BUTTON ***********/
+
+.btn {
+    background-image: linear-gradient(to bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
+    border-radius: 30px;
+    font-size: 0.8em;
+    color: white;
+    border: none;
+    padding: 15px;
+    box-shadow: 0px 10px 23px -15px black ;
+    font-family: 'Roboto-Bold';
+    font-weight: normal;
+    transition: 500ms ease-in-out;
+    &:hover {
+		filter: brightness(1.1);
+		box-shadow: 10px 10px 23px -1px rgba(0,0,0,0.20);
+	}
+    &:active {
+        animation: 500ms appear;
+        animation-fill-mode: forwards;
+    }
+}
+
+.bloc_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    margin-top: -15px;
+    padding-bottom: 20px;
+}
+
+/********** FOOTER *********/
 
 footer {
     color: white;
@@ -379,6 +409,8 @@ footer {
         color: $pink;
     }
 }
+
+/************ DESKTOP VERSION **************/
 
 @media screen and (min-width: 1024px) {
     body {

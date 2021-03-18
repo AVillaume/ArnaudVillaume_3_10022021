@@ -23,6 +23,16 @@ $mint: #99E2D0;
     src: url(../font/Shrikhand-Regular.ttf);
 }
 
+/***********    LOADING SPINNER    ***********/
+
+@keyframes fadeout 
+{
+  0% {opacity:1; transform: scale(1,1);}
+  90% {opacity: 1;}
+  99% {transform:scale(1,1);}
+  100% {opacity:0; transform: scale(0,0);}
+}
+
 .loading__spinner
 {
 	animation: fadeout 3000ms;
@@ -34,14 +44,6 @@ $mint: #99E2D0;
 	height: 100%;
 	position: fixed;
 	z-index: 100000;
-}
-
-@keyframes fadeout 
-{
-  0% {opacity:1; transform: scale(1,1);}
-  90% {opacity: 1;}
-  99% {transform:scale(1,1);}
-  100% {opacity:0; transform: scale(0,0);}
 }
 
 .spinner {
@@ -101,13 +103,16 @@ $mint: #99E2D0;
   }
 }
 
-  
+/****************** BODY ***********************/
+
 body {
     max-width: 760px;
     margin: auto;
     font-family: 'Roboto-Regular';
     scroll-behavior: smooth;
 }
+
+/********* RESTAURANT IMAGE *******************/
   
 .restaurant img {
     width: 100%;
@@ -116,8 +121,10 @@ body {
     object-fit: cover;
     border-radius: 20px 20px 0 0;
 }
+
+/*********** HEADER ****************/
   
-header, .location, .bloc_btn, .all_resto {
+header, .location, .bloc_btn, .all_resto {     /*** other class with same display  ***/ 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -137,6 +144,8 @@ header .header_logo {
     position: relative;
 }
 
+/*************  LOCATION  ***********************/
+
 .location {
     color: rgb(65, 65, 65);
     height: 40px;
@@ -154,9 +163,11 @@ header .header_logo {
     margin-left: 15px;
 }
   
-.align_loc, .footer_list {
+.align_loc, .footer_list {    /*** + footer display  ***/
     display: flex;
 }
+
+/************* PRESENTATION ENT. *************/
 
 .accroche, .all_block {
     display: flex;
@@ -186,6 +197,8 @@ header .header_logo {
     font-weight: lighter;
     padding: 0px 15px;
 }
+
+/************** BOUTON *************/
   
 .btn {
     background-image: linear-gradient(to bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
@@ -207,6 +220,8 @@ header .header_logo {
         animation-fill-mode: forwards;
     }
 }
+
+/***********  FUNCTION  *********************/
 
 .highTitle {
     font-family: 'Roboto-Bold';
@@ -247,6 +262,8 @@ header .header_logo {
     margin-left: -7px;
     margin-right: 15px;
 }
+
+/******** RESTAURANT CARD ***********/
 
 .restaurant {
     padding-top: 15px;
@@ -294,6 +311,8 @@ header .header_logo {
     margin-bottom: 10px;
 }
 
+/****** HEART GRADIENT ********/
+
 .cardHeart {
     position: relative;
 }
@@ -330,11 +349,7 @@ header .header_logo {
     }
 }
 
-
-
-.bloc_btn {
-    height: 100px;
-}
+/******* FOOTER ******/
 
 footer {
     background-color: rgb(65, 65, 65);
@@ -383,6 +398,8 @@ footer {
         color: $pink;
     }
 }
+
+/********** DESKTOP VERSION ************/
 
 
 @media screen and (min-width: 1024px) {

@@ -18,6 +18,7 @@
   src: url(../font/Shrikhand-Regular.ttf);
 }
 
+/********** ANIMATION **********/
 @-webkit-keyframes textCut {
   from {
     width: 100%;
@@ -26,7 +27,6 @@
     width: 68%;
   }
 }
-
 @keyframes textCut {
   from {
     width: 100%;
@@ -80,6 +80,7 @@
   }
 }
 
+/*********** APPEAR *********/
 .appear_1 {
   -webkit-animation: 1s 0.5s appear;
           animation: 1s 0.5s appear;
@@ -101,6 +102,11 @@
           animation-fill-mode: forwards;
 }
 
+.menu_container {
+  opacity: 0;
+}
+
+/************* RESTAURANT IMAGE **********/
 .img_resto {
   width: 100%;
   height: 300px;
@@ -110,12 +116,14 @@
      object-position: 30% 50%;
 }
 
+/********* BODY *********/
 body {
   max-width: 760px;
   margin: auto;
   font-family: 'Roboto-Regular';
 }
 
+/******** HEADER *******/
 .logoPage {
   font-family: 'Shrikhand';
   font-size: 1.6em;
@@ -139,6 +147,7 @@ body {
   background-color: white;
 }
 
+/********** ARROW BACK HOME *********/
 .fa-arrow-left {
   color: #414141;
   position: absolute;
@@ -157,6 +166,7 @@ body {
           transform: rotate(8turn) scale(15);
 }
 
+/************ BLOC PAGE ***********/
 .main_bloc {
   background-color: #EEEEEE;
   border-top-left-radius: 20px;
@@ -166,6 +176,32 @@ body {
   z-index: 200;
 }
 
+/********** RESTAURANT TITLE **********/
+.resto_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 15px;
+  margin-right: 20px;
+  padding-top: 5px;
+}
+
+.bigTitle {
+  font-family: 'Shrikhand';
+  font-size: 1.5em;
+}
+
+/********* HEART GRADIENT *********/
 .cardHeart {
   position: relative;
 }
@@ -205,6 +241,159 @@ body {
   opacity: 0;
 }
 
+.heart {
+  font-size: 1.2em;
+}
+
+/******* MENU TITLE ********/
+.menu_title {
+  color: #414141;
+  font-size: 1.1em;
+  margin-left: 15px;
+  font-family: 'Roboto-Light';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.underline {
+  -webkit-text-decoration: underline #99E2D0;
+          text-decoration: underline #99E2D0;
+  text-underline-position: under;
+}
+
+/*********** ALL REPAS ( FLEX & MARGIN ) **********/
+.all_repas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+/***************** BREAK WORD AND OVERFLOW HIDDEN *****************/
+.plat h3, .plat .support {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/********* PLAT CARD ********/
+.plat {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 10px 20px -10px #c2c2c2;
+          box-shadow: 0px 10px 20px -10px #c2c2c2;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  width: 96%;
+  min-height: 70px;
+  max-height: 70px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.plat:hover .fa-check-circle, .plat:active .fa-check-circle, .plat:focus .fa-check-circle {
+  /*         <-----   ANIMATION CHECK CIRCLE */
+  -webkit-transform: rotate(1turn);
+          transform: rotate(1turn);
+  -webkit-transition: -webkit-transform 600ms ease-in-out;
+  transition: -webkit-transform 600ms ease-in-out;
+  transition: transform 600ms ease-in-out;
+  transition: transform 600ms ease-in-out, -webkit-transform 600ms ease-in-out;
+}
+
+.plat:hover .checkCircle, .plat:active .checkCircle, .plat:focus .checkCircle {
+  -webkit-transform: translateX(-110%);
+          transform: translateX(-110%);
+}
+
+.plat:hover .support, .plat:active .support, .plat:focus .support {
+  -webkit-animation: 750ms ease-in-out textCut;
+          animation: 750ms ease-in-out textCut;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.plat:hover .alignement h3, .plat:active .alignement h3, .plat:focus .alignement h3 {
+  -webkit-animation: 700ms ease-in-out titleCut;
+          animation: 700ms ease-in-out titleCut;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.plat h3 {
+  font-size: 1em;
+  font-family: 'Roboto-Bold';
+  font-weight: normal;
+  margin-top: 15px;
+}
+
+.support {
+  font-family: 'Roboto-Light';
+  font-size: 0.9em;
+  width: 100%;
+}
+
+.alignement {
+  margin-left: 7px;
+}
+
+.text_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: -25px;
+  margin-right: 10px;
+}
+
+.price {
+  font-family: 'Roboto-Bold';
+  font-weight: normal;
+  font-size: 0.8em;
+  padding: 5px;
+}
+
+/***************** CHECK CIRCLE ***************/
+.checkCircle {
+  margin-right: 0px;
+  width: 25%;
+  height: 100px;
+  background-color: #99E2D0;
+  font-size: 1.6em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: -webkit-transform 750ms ease-in-out;
+  transition: -webkit-transform 750ms ease-in-out;
+  transition: transform 750ms ease-in-out;
+  transition: transform 750ms ease-in-out, -webkit-transform 750ms ease-in-out;
+  position: absolute;
+  top: -15px;
+  right: -30%;
+}
+
+.fa-check-circle::before {
+  content: "\f058";
+  font-weight: bold;
+  color: white;
+  position: relative;
+  right: 1.5px;
+}
+
+/************** BUTTON ***********/
 .btn {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), color-stop(#e86edb), color-stop(#cf64dc), color-stop(#b35cdc), to(#9356dc));
   background-image: linear-gradient(to bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
@@ -250,180 +439,7 @@ body {
   padding-bottom: 20px;
 }
 
-.resto_title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-left: 15px;
-  margin-right: 20px;
-  padding-top: 5px;
-}
-
-.bigTitle {
-  font-family: 'Shrikhand';
-  font-size: 1.5em;
-}
-
-.heart {
-  font-size: 1.2em;
-}
-
-.menu_title {
-  color: #414141;
-  font-size: 1.1em;
-  margin-left: 15px;
-  font-family: 'Roboto-Light';
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.underline {
-  -webkit-text-decoration: underline #99E2D0;
-          text-decoration: underline #99E2D0;
-  text-underline-position: under;
-}
-
-.all_repas {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-left: 15px;
-  margin-right: 15px;
-}
-
-.menu_container {
-  opacity: 0;
-}
-
-.plat {
-  background-color: #fff;
-  -webkit-box-shadow: 0px 10px 20px -10px #c2c2c2;
-          box-shadow: 0px 10px 20px -10px #c2c2c2;
-  border-radius: 15px;
-  margin-bottom: 15px;
-  width: 96%;
-  min-height: 70px;
-  max-height: 70px;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.plat:hover .fa-check-circle, .plat:active .fa-check-circle, .plat:focus .fa-check-circle {
-  -webkit-transform: rotate(1turn);
-          transform: rotate(1turn);
-  -webkit-transition: -webkit-transform 600ms ease-in-out;
-  transition: -webkit-transform 600ms ease-in-out;
-  transition: transform 600ms ease-in-out;
-  transition: transform 600ms ease-in-out, -webkit-transform 600ms ease-in-out;
-}
-
-.plat:hover .checkCircle, .plat:active .checkCircle, .plat:focus .checkCircle {
-  -webkit-transform: translateX(-110%);
-          transform: translateX(-110%);
-}
-
-.plat:hover .support, .plat:active .support, .plat:focus .support {
-  -webkit-animation: 750ms ease-in-out textCut;
-          animation: 750ms ease-in-out textCut;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-.plat:hover .alignement h3, .plat:active .alignement h3, .plat:focus .alignement h3 {
-  -webkit-animation: 700ms ease-in-out titleCut;
-          animation: 700ms ease-in-out titleCut;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-.plat h3, .plat .support {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.checkCircle {
-  margin-right: 0px;
-  width: 25%;
-  height: 100px;
-  background-color: #99E2D0;
-  font-size: 1.6em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: -webkit-transform 750ms ease-in-out;
-  transition: -webkit-transform 750ms ease-in-out;
-  transition: transform 750ms ease-in-out;
-  transition: transform 750ms ease-in-out, -webkit-transform 750ms ease-in-out;
-  position: absolute;
-  top: -15px;
-  right: -30%;
-}
-
-.fa-check-circle::before {
-  content: "\f058";
-  font-weight: bold;
-  color: white;
-  position: relative;
-  right: 1.5px;
-}
-
-.plat h3 {
-  font-size: 1em;
-  font-family: 'Roboto-Bold';
-  font-weight: normal;
-  margin-top: 15px;
-}
-
-.support {
-  font-family: 'Roboto-Light';
-  font-size: 0.9em;
-  width: 100%;
-}
-
-.alignement {
-  margin-left: 7px;
-}
-
-.text_row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: -25px;
-  margin-right: 10px;
-}
-
-.price {
-  font-family: 'Roboto-Bold';
-  font-weight: normal;
-  font-size: 0.8em;
-  padding: 5px;
-}
-
+/********** FOOTER *********/
 footer {
   color: white;
   background-color: #414141;
@@ -478,6 +494,7 @@ footer {
   color: #FF79DA;
 }
 
+/************ DESKTOP VERSION **************/
 @media screen and (min-width: 1024px) {
   body {
     max-width: 1400px;
