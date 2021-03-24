@@ -133,8 +133,6 @@ body {
 
 .headerAlign {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -178,8 +176,6 @@ body {
 
 /********** RESTAURANT TITLE **********/
 .resto_title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -251,8 +247,6 @@ body {
   font-size: 1.1em;
   margin-left: 15px;
   font-family: 'Roboto-Light';
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -266,8 +260,6 @@ body {
 
 /*********** ALL REPAS ( FLEX & MARGIN ) **********/
 .all_repas {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -346,8 +338,6 @@ body {
 }
 
 .text_row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: -25px;
   margin-right: 10px;
@@ -367,8 +357,6 @@ body {
   height: 100px;
   background-color: #99E2D0;
   font-size: 1.6em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -425,8 +413,6 @@ body {
 }
 
 .bloc_btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -456,8 +442,6 @@ footer {
 
 .footer_list {
   margin-left: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding-bottom: 20px;
 }
