@@ -342,6 +342,13 @@ header .header_logo {
   margin-bottom: 20px;
   -webkit-box-shadow: 0px 10px 20px -10px #c2c2c2;
           box-shadow: 0px 10px 20px -10px #c2c2c2;
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
+  cursor: pointer;
+}
+
+.block_fonction:hover, .block_fonction:active {
+  background-color: #9356DC22;
 }
 
 .fonction_text {
@@ -410,6 +417,7 @@ header .header_logo {
 /****** HEART GRADIENT ********/
 .cardHeart {
   position: relative;
+  cursor: pointer;
 }
 
 .fa-heart {

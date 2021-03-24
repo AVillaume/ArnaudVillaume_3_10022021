@@ -245,6 +245,12 @@ header .header_logo {
     border-radius: 20px;
     margin-bottom: 20px;
     box-shadow: 0px 10px 20px -10px rgb(194, 194, 194) ;
+    transition: 500ms ease-in-out;
+    cursor: pointer;
+    &:hover,
+    &:active {
+        background-color:#9356DC22;
+    }
 }
 
 
@@ -315,6 +321,7 @@ header .header_logo {
 
 .cardHeart {
     position: relative;
+    cursor: pointer;
 }
 
 .fa-heart {
